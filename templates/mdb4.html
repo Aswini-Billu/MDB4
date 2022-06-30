@@ -5,13 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    {% block title %}
+    <title>This is mdb4 parent file</title>
+    {% endblock %}
     <link rel="stylesheet" href="{% static 'css/bootstrap.css'%}">
     <link rel="stylesheet" href="{% static 'css/mdb.css'%}">
 </head>
 <body>
-        <h1>This is mdb4 file</h1>
+        
         <button type="button" class="btn btn-primary">Primary</button>
+        
+        <h1>This is the content of parent mdb4</h1>
+        <h2>Hello this is parent</h2>
+        
+        <h3>This is h3 also parent </h3>
+
+        {% block body_block %}
+
+        {% endblock %}
        
         <script src="{% static 'js/bootstrap.js' %}"></script>    
         <script src="{% static 'js/jquery.js' %}"></script>
